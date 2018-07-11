@@ -1,4 +1,8 @@
 <container>
   <movie-search></movie-search>
-
+  <ul class="heroes">
+    <li *ngFor="let movie of movies">
+      <strong>{{movie.title}}</strong> <img src="{{movie.poster_path}}" />
+    </li>
+  </ul>
 </container>
