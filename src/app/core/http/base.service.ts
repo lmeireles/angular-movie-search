@@ -24,7 +24,7 @@ export abstract class BaseService {
     };
   }
 
-  /** Log a HeroService message with the MessageService */
+  /** Log a message with the MessageService */
   protected log(message: string) {
     console.log(message);
     // TODO: create message service

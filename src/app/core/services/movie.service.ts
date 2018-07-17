@@ -4,23 +4,31 @@ import {Movie} from '../models/movie';
 import {Observable} from 'rxjs';
 import {catchError, map} from 'rxjs/internal/operators';
 import {BaseService} from '../http/base.service';
+import {ArrayResponse} from '../http/models/array-response';
+import {Response} from '../http/models/response';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MovieService extends BaseService {
 
-  baseUrl = '';
-  movies: Movie[] = [];
+  baseUrl = 'http://localhost:4567';
 
   constructor(private http: HttpClient) {
     super();
   }
 
-  latest(): Observable<Movie[]> {
-    return this.http.get<Movie[]>(this.baseUrl).pipe(
-        map((data: Movie[]) => this.movies = data),
-        catchError(this.handleError<Movie[]>('listLatestMovies'))
+  popular(): Observable<ArrayResponse<Movie>> {
+    return this.http.get<ArrayResponse<Movie>>(`${this.baseUrl}/popular`).pipe(
+        map((data: ArrayResponse<Movie>) => data),
+        catchError(this.handleError<ArrayResponse<Movie>>('listLatestMovies'))
+      );
+  }
+
+  get(id: Number): Observable<Response<Movie>> {
+    return this.http.get<Response<Movie>>(`${this.baseUrl}/popular`).pipe(
+        map((data: Response<Movie>) => data),
+        catchError(this.handleError<Response<Movie>>('listLatestMovies'))
       );
   }
 }

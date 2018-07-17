@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'container',
+  selector: 'app-container',
   template: `
     <div class="container">
       <ng-content></ng-content>
@@ -9,12 +9,4 @@ import {Component, OnInit} from '@angular/core';
   `,
   styleUrls: ['./container.component.scss']
 })
-export class ContainerComponent implements OnInit {
-
-  constructor() {
-  }
-
-  ngOnInit() {
-  }
-
-}
+export class ContainerComponent {}

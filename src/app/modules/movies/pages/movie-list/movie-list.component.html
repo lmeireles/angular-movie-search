@@ -1,8 +1,12 @@
-<container>
-  <movie-search></movie-search>
-  <ul class="heroes">
-    <li *ngFor="let movie of movies">
-      <strong>{{movie.title}}</strong> <img src="{{movie.poster_path}}" />
-    </li>
-  </ul>
-</container>
+<app-container>
+  <app-movie-search></app-movie-search>
+
+  <app-headline-1>
+    Latest
+  </app-headline-1>
+
+  <div class="list-holder">
+    <app-movie-card *ngFor="let m of movies" [movie]="m"></app-movie-card>
+  </div>
+
+</app-container>

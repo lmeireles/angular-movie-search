@@ -18,7 +18,8 @@ export class MovieListComponent implements OnInit {
   }
 
   getMovies() {
-    this.movieService.latest().subscribe(data => this.movies = data);
+    this.movieService.popular().subscribe(
+      data => this.movies = data.results);
   }
 
 }

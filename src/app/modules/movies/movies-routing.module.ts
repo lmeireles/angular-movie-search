@@ -1,10 +1,12 @@
 import {NgModule} from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {MovieListComponent} from './pages/movie-list/movie-list.component';
+import {MovieDetailComponent} from './pages/movie-detail/movie-detail.component';
 
 
 const routes: Routes = [
-  {path: 'movies', component: MovieListComponent}
+  {path: 'movies', component: MovieListComponent},
+  {path: 'movie/:id', component: MovieDetailComponent}
 ];
 
 @NgModule({

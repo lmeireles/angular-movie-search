@@ -1,0 +1,21 @@
+@import 'variables';
+
+:host {
+  max-width: 100%;
+  padding: $spacer/1.3;
+  @media ($xs-up) {
+    max-width: 50%;
+  }
+  @media ($md-up) {
+    max-width: 25%;
+  }
+}
+
+mat-card {
+  animation: all .7s ease;
+
+  mat-card-content {
+    min-height: 135px;
+    margin: 0;
+  }
+}

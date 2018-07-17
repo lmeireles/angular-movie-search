@@ -1,1 +1,21 @@
-$spacer: 16px;
+//Break-points
+$xs-down: "max-width: 767px";
+$xs-up:   "min-width: 768px";
+$md-down: "max-width: 991px";
+$md-up:   "min-width: 992px";
+$lg-down: "max-width: 1439px";
+$lg-up:   "min-width: 1440px";
+
+//Typography
+$base-rem-calculator: 16;
+$headline-1: (96/$base-rem-calculator)rem;
+$headline-2: (60/$base-rem-calculator)rem;
+$headline-3: (48/$base-rem-calculator)rem;
+$headline-4: (34/$base-rem-calculator)rem;
+$headline-5: (24/$base-rem-calculator)rem;
+$headline-6: (20/$base-rem-calculator)rem;
+$body-1: (16/$base-rem-calculator)rem;
+$body-1: (14/$base-rem-calculator)rem;
+
+
+$spacer: 12px;
