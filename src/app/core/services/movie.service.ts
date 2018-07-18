@@ -26,9 +26,9 @@ export class MovieService extends BaseService {
   }
 
   get(id: Number): Observable<Response<Movie>> {
-    return this.http.get<Response<Movie>>(`${this.baseUrl}/popular`).pipe(
+    return this.http.get<Response<Movie>>(`${this.baseUrl}/movie/${id}`).pipe(
         map((data: Response<Movie>) => data),
-        catchError(this.handleError<Response<Movie>>('listLatestMovies'))
+        catchError(this.handleError<Response<Movie>>('getMovie'))
       );
   }
 }

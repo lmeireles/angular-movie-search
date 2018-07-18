@@ -10,6 +10,10 @@ import {Movie} from '../../../../core/models/movie';
 export class MovieListComponent implements OnInit {
   movies: Movie[];
 
+  get isLoading(): Boolean {
+    return this.movies == null;
+  }
+
   constructor(private movieService: MovieService) {
   }
 

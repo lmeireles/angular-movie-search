@@ -1,12 +1,14 @@
 <app-container>
   <app-movie-search></app-movie-search>
 
-  <app-headline-1>
-    Latest
-  </app-headline-1>
+  <h1>Latest</h1>
 
-  <div class="list-holder">
+  <div *ngIf="!isLoading; else loading" class="list-holder" >
     <app-movie-card *ngFor="let m of movies" [movie]="m"></app-movie-card>
   </div>
+
+  <ng-template #loading>
+    <app-spinner></app-spinner>
+  </ng-template>
 
 </app-container>

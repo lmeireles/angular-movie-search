@@ -1,3 +1,5 @@
+import {Genre} from './genre';
+
 export class Movie {
   id: Number;
   poster_path: String;
@@ -13,4 +15,12 @@ export class Movie {
   video: Boolean;
   vote_average: Number;
   overview: String;
+
+  // Extra fields
+  budget: Number;
+  revenue: Number;
+  runtime: Number;
+  genres: Genre[];
+  homepage: String;
+  tagline: String;
 }

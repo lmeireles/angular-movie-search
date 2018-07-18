@@ -1,0 +1,8 @@
+@import "variables";
+
+:host {
+  width: 100%;
+  padding: $spacer*2;
+  display: flex;
+  justify-content: center;
+}
