@@ -5,7 +5,7 @@ import {MovieListComponent} from './pages/movie-list/movie-list.component';
 import {SharedModule} from '../../shared/shared.module';
 import {MovieSearchComponent} from './components/movie-search.component';
 import {
-  MatButtonModule, MatCardModule, MatFormFieldModule, MatGridListModule, MatIconModule, MatInputModule
+  MatButtonModule, MatCardModule, MatDividerModule, MatFormFieldModule, MatIconModule, MatInputModule
 } from '@angular/material';
 import {MovieService} from '../../core/services/movie.service';
 import {MovieCardComponent} from './components/movie-card.component';
@@ -20,7 +20,8 @@ import {MovieDetailComponent} from './pages/movie-detail/movie-detail.component'
     MatInputModule,
     MatIconModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDividerModule
   ],
   providers: [
     MovieService

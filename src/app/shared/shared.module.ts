@@ -1,21 +1,28 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {ContainerComponent} from './components/container.component';
-import {MatProgressSpinnerModule} from '@angular/material';
+import {MatIconModule, MatListModule, MatProgressSpinnerModule, MatSidenavModule, MatToolbarModule} from '@angular/material';
 import {SpinnerComponent} from './components/spinner.component';
+import {LayoutComponent} from './components/layout.component';
 
 @NgModule({
   imports: [
     CommonModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
   ],
   declarations: [
     ContainerComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    LayoutComponent
   ],
   exports: [
     ContainerComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    LayoutComponent
   ]
 })
 export class SharedModule { }

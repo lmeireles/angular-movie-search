@@ -1,8 +1,21 @@
-<app-container>
+<app-layout [containerClass]="'flex'">
   <ng-template [ngIf]="movie">
+    <div class="image-column">
+      <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" />
+    </div>
+    <div class="description-column">
+      <h1>{{movie.title}}</h1>
+      <p>{{movie.overview}}</p>
 
-    <h1>{{movie.title}}</h1>
+      <mat-divider></mat-divider>
+
+      <p><strong>Duration:</strong> {{movie.runtime}}</p>
+      <p><strong>Genre:</strong> {{genre}}</p>
+      <p><strong>Release:</strong> {{movie.release_date | date}}</p>
+      <p><strong>Budget:</strong> {{movie.budget | currency}}</p>
+      <p><strong>Revenue:</strong> {{movie.revenue | currency}}</p>
+    </div>
 
 
   </ng-template>
-</app-container>
+</app-layout>

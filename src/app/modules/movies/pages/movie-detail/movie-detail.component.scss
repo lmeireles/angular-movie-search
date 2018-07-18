@@ -1,6 +1,19 @@
-.list-holder {
-  display: flex;
-  flex-flow: row;
-  flex-wrap: wrap;
+@import "variables";
 
+.image-column {
+  flex: 1;
+  @media ($xs-down) {
+    display: none;
+  }
+
+  img {
+    max-width: 400px;
+  }
+}
+.description-column {
+  flex: auto;
+  padding: 0 $spacer $spacer $spacer;
+  h1 {
+    margin-top: 0;
+  }
 }

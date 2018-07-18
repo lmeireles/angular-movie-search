@@ -11,6 +11,10 @@ import {ActivatedRoute} from '@angular/router';
 export class MovieDetailComponent implements OnInit {
   movie: Movie;
 
+  get genre() {
+    return this.movie.genres.map(g => g.name).join(', ');
+  }
+
   constructor(private route: ActivatedRoute,
               private movieService: MovieService) {
   }
