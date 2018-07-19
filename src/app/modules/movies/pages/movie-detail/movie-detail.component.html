@@ -2,6 +2,10 @@
   <ng-template [ngIf]="movie">
     <div class="image-column">
       <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" />
+
+      <button mat-raised-button color="primary" routerLink="/movies">
+        Back
+      </button>
     </div>
     <div class="description-column">
       <h1>{{movie.title}}</h1>

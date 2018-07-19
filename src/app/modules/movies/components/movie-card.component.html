@@ -1,6 +1,6 @@
 <mat-card
   routerLink="/movie/{{movie.id}}"
-  *ngIf="movie"
+  *ngIf="movie && movie.poster_path"
   ngClass="{{class}}">
 
   <img mat-card-image src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" />

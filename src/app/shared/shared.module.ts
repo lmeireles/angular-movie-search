@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {ContainerComponent} from './components/container.component';
-import {MatIconModule, MatListModule, MatProgressSpinnerModule, MatSidenavModule, MatToolbarModule} from '@angular/material';
+import {
+  MatButtonModule, MatIconModule, MatListModule, MatProgressSpinnerModule, MatSidenavModule,
+  MatToolbarModule
+} from '@angular/material';
 import {SpinnerComponent} from './components/spinner.component';
 import {LayoutComponent} from './components/layout.component';
 
@@ -12,7 +15,8 @@ import {LayoutComponent} from './components/layout.component';
     MatToolbarModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatButtonModule
   ],
   declarations: [
     ContainerComponent,
@@ -26,4 +30,3 @@ import {LayoutComponent} from './components/layout.component';
   ]
 })
 export class SharedModule { }
-

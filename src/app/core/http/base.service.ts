@@ -1,8 +1,11 @@
 import {Observable, of} from 'rxjs';
+import {MatSnackBar} from '@angular/material';
 
 export abstract class BaseService {
 
   abstract baseUrl: string;
+
+  constructor(public snackBarService: MatSnackBar) {}
 
   /**
    *
@@ -27,7 +30,8 @@ export abstract class BaseService {
   /** Log a message with the MessageService */
   protected log(message: string) {
     console.log(message);
-    // TODO: create message service
-    // this.messageService.add('HeroService: ' + message);
+    this.snackBarService.open(message, 'Ok', {
+      horizontalPosition: 'start'
+    });
   }
 }

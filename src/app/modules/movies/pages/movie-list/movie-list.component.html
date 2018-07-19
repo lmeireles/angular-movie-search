@@ -1,7 +1,14 @@
 <app-layout>
-  <app-movie-search></app-movie-search>
+  <app-movie-search
+    (search)="search($event)"></app-movie-search>
 
-  <h1>Latest</h1>
+  <div class="title-holder">
+    <h1>{{searching ? 'Search' : 'Latest'}}</h1>
+
+    <button mat-raised-button color="primary" (click)="toggleSearch()" *ngIf="searching">
+      Exit Search
+    </button>
+  </div>
 
   <div *ngIf="!isLoading; else loading" class="list-holder" >
     <app-movie-card *ngFor="let m of movies" [movie]="m"></app-movie-card>

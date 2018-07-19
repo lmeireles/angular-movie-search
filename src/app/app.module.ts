@@ -9,6 +9,7 @@ import {AppRoutingModule} from './core/routing/app-routing.module';
 import {MoviesModule} from './modules/movies/movies.module';
 import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
 import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
+import {MatSnackBarModule} from '@angular/material';
 
 @NgModule({
   imports: [
@@ -20,6 +21,7 @@ import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
     AuthenticationModule,
     MoviesModule,
     AppRoutingModule,
+    MatSnackBarModule
   ],
   declarations: [
     AppComponent

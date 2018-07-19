@@ -1,6 +1,18 @@
+@import "variables";
+
 .list-holder {
   display: flex;
   flex-flow: row;
   flex-wrap: wrap;
 
+}
+
+.title-holder {
+  width: 100%;
+  display: flex;
+
+  h1 {
+    flex: auto;
+    margin: 0;
+  }
 }

@@ -8,12 +8,16 @@
 
   img {
     max-width: 400px;
+    margin-bottom: $spacer;
   }
 }
 .description-column {
   flex: auto;
-  padding: 0 $spacer $spacer $spacer;
+  padding: 0 $spacer $spacer;
   h1 {
     margin-top: 0;
+  }
+  mat-divider {
+    margin-bottom: $spacer;
   }
 }

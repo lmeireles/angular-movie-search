@@ -6,3 +6,12 @@
   padding: $spacer;
   margin: 0 auto;
 }
+
+.side-nav {
+  min-width: 250px;
+}
+
+.mat-sidenav-container {
+  min-height: 100%;
+  background: #fafafa;
+}
