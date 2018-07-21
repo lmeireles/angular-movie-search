@@ -13,29 +13,27 @@ import {MatSnackBar} from '@angular/material';
 })
 export class MovieService extends BaseService {
 
-  baseUrl = 'http://localhost:4567';
-
   constructor(private http: HttpClient,
               public snackBarService: MatSnackBar) {
     super(snackBarService);
   }
 
   popular(): Observable<ArrayResponse<Movie>> {
-    return this.http.get<ArrayResponse<Movie>>(`${this.baseUrl}/popular`).pipe(
+    return this.http.get<ArrayResponse<Movie>>(`${this.apiUrl}/popular`).pipe(
       map((data: ArrayResponse<Movie>) => data),
       catchError(this.handleError<ArrayResponse<Movie>>('listLatestMovies'))
     );
   }
 
   search(term: String): Observable<ArrayResponse<Movie>> {
-    return this.http.post<ArrayResponse<Movie>>(`${this.baseUrl}/movie/search`, {term: term}).pipe(
+    return this.http.post<ArrayResponse<Movie>>(`${this.apiUrl}/movie/search`, {term: term}).pipe(
       map((data: ArrayResponse<Movie>) => data),
       catchError(this.handleError<ArrayResponse<Movie>>('searchMovies'))
     );
   }
 
   get(id: Number): Observable<Response<Movie>> {
-    return this.http.get<Response<Movie>>(`${this.baseUrl}/movie/${id}`).pipe(
+    return this.http.get<Response<Movie>>(`${this.apiUrl}/movie/${id}`).pipe(
       map((data: Response<Movie>) => data),
       catchError(this.handleError<Response<Movie>>('getMovie'))
     );

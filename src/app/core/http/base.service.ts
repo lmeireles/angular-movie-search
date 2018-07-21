@@ -1,9 +1,10 @@
 import {Observable, of} from 'rxjs';
 import {MatSnackBar} from '@angular/material';
+import {environment} from '../../../environments/environment';
 
 export abstract class BaseService {
 
-  abstract baseUrl: string;
+  protected apiUrl = environment.apiUrl;
 
   constructor(public snackBarService: MatSnackBar) {}
 
